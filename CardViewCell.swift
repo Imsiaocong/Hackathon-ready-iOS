@@ -16,11 +16,13 @@ class CardCollectionViewCell: UICollectionViewCell {
     @IBInspectable var shadowColor: UIColor? = UIColor.black
     @IBInspectable var shadowOpacity: Float = 1
     
+    
 //    private var frontImage: UIImageView!
 //    private var backImage: UIImageView!
 //    private var flipped = false
     
     override func layoutSubviews() {
+        
         layer.cornerRadius = cornerRadius
         let shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius)
         

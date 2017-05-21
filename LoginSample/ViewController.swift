@@ -42,11 +42,9 @@ class ViewController: UIViewController {
         self.loginButton.layer.shadowOpacity = 0.5
         self.loginButton.layer.shadowPath = shadowPath.cgPath
         
-        UIView.animate(withDuration: 0.5, delay: 0, options: .transitionFlipFromRight, animations: {
+        UIView.animate(withDuration: 1, delay: 0.3, usingSpringWithDamping: 0.45, initialSpringVelocity: 0.5, options: .allowAnimatedContent, animations: {
             self.loginCard.frame.origin.y = 175
-        }) { (Bool) in
-            return
-        }
+        }, completion: nil)
     }
     
     @IBAction func login(_ sender: UIButton) {

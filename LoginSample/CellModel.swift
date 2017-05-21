@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CellModel: NSObject {
-    var name: String!
-    var image: UIImage!
+protocol CellModelProtocol {
+    var name: String {get set}
+    var image: UIImage {get set}
 }
