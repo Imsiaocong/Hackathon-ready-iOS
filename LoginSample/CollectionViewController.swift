@@ -53,7 +53,7 @@ class CollectionViewController: UICollectionViewController, UIGestureRecognizerD
     @objc func added() {
         
         if ((n % 2) == 0){
-        self.addView = CardView(frame: CGRect(x: 230, y: 64, width: 140, height: 200))
+        self.addView = CardView(frame: CGRect(x: 230, y: 670, width: 140, height: 200))
         self.addView.tag = tagNum
         self.addView.setNeedsDisplay()
         self.addView.backgroundColor = UIColor(red: 26, green: 188, blue: 156, alpha: 1)
@@ -62,6 +62,7 @@ class CollectionViewController: UICollectionViewController, UIGestureRecognizerD
         self.addView.alpha = 0
             UIView.animate(withDuration: 0.35, animations: {
                 self.addView.alpha = 1
+                self.addView.frame.origin = CGPoint(x: 230, y: 64)
             }, completion: nil)
             n += 1
         }else if((n % 2) == 1){

@@ -13,6 +13,8 @@
 		863197371ECA539C00A77721 /* CellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863197361ECA539C00A77721 /* CellModel.swift */; };
 		863653EA1EC944D800FD471B /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863653E91EC944D800FD471B /* CollectionViewController.swift */; };
 		863653EC1EC9612000FD471B /* CardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863653EB1EC9612000FD471B /* CardViewCell.swift */; };
+		8636EA961ED9461900EFC5CC /* AddFeatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8636EA941ED9461900EFC5CC /* AddFeatureViewController.swift */; };
+		8636EA971ED9461900EFC5CC /* AddFeatureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8636EA951ED9461900EFC5CC /* AddFeatureViewController.xib */; };
 		863EE5061EC8ECB10064601B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863EE5051EC8ECB10064601B /* AppDelegate.swift */; };
 		863EE5081EC8ECB10064601B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863EE5071EC8ECB10064601B /* ViewController.swift */; };
 		863EE50B1EC8ECB10064601B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 863EE5091EC8ECB10064601B /* Main.storyboard */; };
@@ -50,6 +52,8 @@
 		863197361ECA539C00A77721 /* CellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellModel.swift; sourceTree = "<group>"; };
 		863653E91EC944D800FD471B /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		863653EB1EC9612000FD471B /* CardViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewCell.swift; sourceTree = "<group>"; };
+		8636EA941ED9461900EFC5CC /* AddFeatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFeatureViewController.swift; sourceTree = "<group>"; };
+		8636EA951ED9461900EFC5CC /* AddFeatureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddFeatureViewController.xib; sourceTree = "<group>"; };
 		863EE5021EC8ECB10064601B /* LoginSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		863EE5051EC8ECB10064601B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		863EE5071EC8ECB10064601B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +186,8 @@
 		863EE5381EC8F0710064601B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8636EA941ED9461900EFC5CC /* AddFeatureViewController.swift */,
+				8636EA951ED9461900EFC5CC /* AddFeatureViewController.xib */,
 				863EE5071EC8ECB10064601B /* ViewController.swift */,
 				863653E91EC944D800FD471B /* CollectionViewController.swift */,
 				86A560C31ED90F5900DDA44F /* DetailViewController.swift */,
@@ -326,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				863EE5101EC8ECB10064601B /* LaunchScreen.storyboard in Resources */,
+				8636EA971ED9461900EFC5CC /* AddFeatureViewController.xib in Resources */,
 				863EE50D1EC8ECB10064601B /* Assets.xcassets in Resources */,
 				863EE50B1EC8ECB10064601B /* Main.storyboard in Resources */,
 			);
@@ -498,6 +505,7 @@
 				863EE5371EC8EDB80064601B /* CardView.swift in Sources */,
 				863EE5061EC8ECB10064601B /* AppDelegate.swift in Sources */,
 				86A560C41ED90F5900DDA44F /* DetailViewController.swift in Sources */,
+				8636EA961ED9461900EFC5CC /* AddFeatureViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
