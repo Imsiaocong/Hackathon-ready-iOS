@@ -16,6 +16,7 @@ class CardCollectionViewCell: UICollectionViewCell {
     @IBInspectable var shadowColor: UIColor? = UIColor.black
     @IBInspectable var shadowOpacity: Float = 1
     
+    @IBOutlet weak var headImage: UIImageView!
     
 //    private var frontImage: UIImageView!
 //    private var backImage: UIImageView!

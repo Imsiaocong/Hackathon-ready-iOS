@@ -22,6 +22,7 @@
 		863EE5261EC8ECB10064601B /* LoginSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863EE5251EC8ECB10064601B /* LoginSampleUITests.swift */; };
 		863EE5371EC8EDB80064601B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863EE5361EC8EDB80064601B /* CardView.swift */; };
 		863EE53B1EC8F8E80064601B /* authModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863EE53A1EC8F8E80064601B /* authModel.swift */; };
+		86A560C41ED90F5900DDA44F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A560C31ED90F5900DDA44F /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		863EE5271EC8ECB10064601B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		863EE5361EC8EDB80064601B /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		863EE53A1EC8F8E80064601B /* authModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = authModel.swift; sourceTree = "<group>"; };
+		86A560C31ED90F5900DDA44F /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		A496D9006071E2EAF9F29CF0 /* Pods-LoginSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoginSample/Pods-LoginSample.release.xcconfig"; sourceTree = "<group>"; };
 		ACFA3595DBAF945BCDA0B851 /* Pods_LoginSampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginSampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B83B054A2A5284AEE12EE141 /* Pods-LoginSampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginSampleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoginSampleUITests/Pods-LoginSampleUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 			children = (
 				863EE5071EC8ECB10064601B /* ViewController.swift */,
 				863653E91EC944D800FD471B /* CollectionViewController.swift */,
+				86A560C31ED90F5900DDA44F /* DetailViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 				863197371ECA539C00A77721 /* CellModel.swift in Sources */,
 				863EE5371EC8EDB80064601B /* CardView.swift in Sources */,
 				863EE5061EC8ECB10064601B /* AppDelegate.swift in Sources */,
+				86A560C41ED90F5900DDA44F /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

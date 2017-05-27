@@ -14,7 +14,7 @@ class CollectionViewController: UICollectionViewController, UIGestureRecognizerD
     
     var addView: CardView!
     var tagNum: Int = 1
-
+    var imageList = ["coffee","selfie","selfie2","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee"]
     var n = 0
     var rows:Int = 0
 
@@ -45,6 +45,7 @@ class CollectionViewController: UICollectionViewController, UIGestureRecognizerD
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CardCollectionViewCell
+        cell.headImage.image = UIImage(named: imageList[indexPath.row])
         cell.setNeedsDisplay()
         return cell
     }
@@ -80,6 +81,10 @@ class CollectionViewController: UICollectionViewController, UIGestureRecognizerD
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
         print(indexPath.row)
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let controller = sb.instantiateViewController(withIdentifier: "DetailViewController")
+        self.present(controller, animated: true, completion: nil)
+        
                 if let viewWithTag = self.view.viewWithTag(tagNum) {
                     viewWithTag.removeFromSuperview()
                     n = 0
