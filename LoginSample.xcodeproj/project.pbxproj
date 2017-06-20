@@ -10,11 +10,8 @@
 		36ECFBEC4613BC3B361CD5F1 /* Pods_LoginSampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE5962DAAFB2CA85D7514EA4 /* Pods_LoginSampleUITests.framework */; };
 		3BFB3949D41E2B6CE4FD7F9C /* Pods_LoginSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68BB509AA32F4687CE6CD1BC /* Pods_LoginSample.framework */; };
 		73A03C644B0E06FAA0689595 /* Pods_LoginSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACFA3595DBAF945BCDA0B851 /* Pods_LoginSampleTests.framework */; };
-		863197371ECA539C00A77721 /* CellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863197361ECA539C00A77721 /* CellModel.swift */; };
 		863653EA1EC944D800FD471B /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863653E91EC944D800FD471B /* CollectionViewController.swift */; };
 		863653EC1EC9612000FD471B /* CardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863653EB1EC9612000FD471B /* CardViewCell.swift */; };
-		8636EA961ED9461900EFC5CC /* AddFeatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8636EA941ED9461900EFC5CC /* AddFeatureViewController.swift */; };
-		8636EA971ED9461900EFC5CC /* AddFeatureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8636EA951ED9461900EFC5CC /* AddFeatureViewController.xib */; };
 		863EE5061EC8ECB10064601B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863EE5051EC8ECB10064601B /* AppDelegate.swift */; };
 		863EE5081EC8ECB10064601B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863EE5071EC8ECB10064601B /* ViewController.swift */; };
 		863EE50B1EC8ECB10064601B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 863EE5091EC8ECB10064601B /* Main.storyboard */; };
@@ -25,6 +22,10 @@
 		863EE5371EC8EDB80064601B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863EE5361EC8EDB80064601B /* CardView.swift */; };
 		863EE53B1EC8F8E80064601B /* authModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863EE53A1EC8F8E80064601B /* authModel.swift */; };
 		86A560C41ED90F5900DDA44F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A560C31ED90F5900DDA44F /* DetailViewController.swift */; };
+		86CFD8B81EE4E042007C863B /* AddFeatureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86CFD8B71EE4E042007C863B /* AddFeatureView.xib */; };
+		86CFD8BA1EE4E0DE007C863B /* AddFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CFD8B91EE4E0DE007C863B /* AddFeatureView.swift */; };
+		86D974031EF6967E0091F11E /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D974021EF6967E0091F11E /* CollectionViewModel.swift */; };
+		86D974051EF6BB1E0091F11E /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D974041EF6BB1E0091F11E /* CollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,11 +50,8 @@
 		5E9D18A4D45B75ED3EEED4D4 /* Pods-LoginSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoginSample/Pods-LoginSample.debug.xcconfig"; sourceTree = "<group>"; };
 		68BB509AA32F4687CE6CD1BC /* Pods_LoginSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84FC0718B327C605B6736872 /* Pods-LoginSampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginSampleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoginSampleUITests/Pods-LoginSampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		863197361ECA539C00A77721 /* CellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellModel.swift; sourceTree = "<group>"; };
 		863653E91EC944D800FD471B /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		863653EB1EC9612000FD471B /* CardViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewCell.swift; sourceTree = "<group>"; };
-		8636EA941ED9461900EFC5CC /* AddFeatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFeatureViewController.swift; sourceTree = "<group>"; };
-		8636EA951ED9461900EFC5CC /* AddFeatureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddFeatureViewController.xib; sourceTree = "<group>"; };
 		863EE5021EC8ECB10064601B /* LoginSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		863EE5051EC8ECB10064601B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		863EE5071EC8ECB10064601B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +68,10 @@
 		863EE5361EC8EDB80064601B /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		863EE53A1EC8F8E80064601B /* authModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = authModel.swift; sourceTree = "<group>"; };
 		86A560C31ED90F5900DDA44F /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		86CFD8B71EE4E042007C863B /* AddFeatureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddFeatureView.xib; sourceTree = "<group>"; };
+		86CFD8B91EE4E0DE007C863B /* AddFeatureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFeatureView.swift; sourceTree = "<group>"; };
+		86D974021EF6967E0091F11E /* CollectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
+		86D974041EF6BB1E0091F11E /* CollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		A496D9006071E2EAF9F29CF0 /* Pods-LoginSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoginSample/Pods-LoginSample.release.xcconfig"; sourceTree = "<group>"; };
 		ACFA3595DBAF945BCDA0B851 /* Pods_LoginSampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginSampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B83B054A2A5284AEE12EE141 /* Pods-LoginSampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginSampleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoginSampleUITests/Pods-LoginSampleUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -178,6 +180,9 @@
 			children = (
 				863EE5361EC8EDB80064601B /* CardView.swift */,
 				863653EB1EC9612000FD471B /* CardViewCell.swift */,
+				86CFD8B71EE4E042007C863B /* AddFeatureView.xib */,
+				86CFD8B91EE4E0DE007C863B /* AddFeatureView.swift */,
+				86D974041EF6BB1E0091F11E /* CollectionView.swift */,
 			);
 			name = View;
 			path = ..;
@@ -186,8 +191,6 @@
 		863EE5381EC8F0710064601B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8636EA941ED9461900EFC5CC /* AddFeatureViewController.swift */,
-				8636EA951ED9461900EFC5CC /* AddFeatureViewController.xib */,
 				863EE5071EC8ECB10064601B /* ViewController.swift */,
 				863653E91EC944D800FD471B /* CollectionViewController.swift */,
 				86A560C31ED90F5900DDA44F /* DetailViewController.swift */,
@@ -199,7 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				863EE53A1EC8F8E80064601B /* authModel.swift */,
-				863197361ECA539C00A77721 /* CellModel.swift */,
+				86D974021EF6967E0091F11E /* CollectionViewModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -332,9 +335,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				863EE5101EC8ECB10064601B /* LaunchScreen.storyboard in Resources */,
-				8636EA971ED9461900EFC5CC /* AddFeatureViewController.xib in Resources */,
 				863EE50D1EC8ECB10064601B /* Assets.xcassets in Resources */,
 				863EE50B1EC8ECB10064601B /* Main.storyboard in Resources */,
+				86CFD8B81EE4E042007C863B /* AddFeatureView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,11 +504,12 @@
 				863653EA1EC944D800FD471B /* CollectionViewController.swift in Sources */,
 				863EE5081EC8ECB10064601B /* ViewController.swift in Sources */,
 				863EE53B1EC8F8E80064601B /* authModel.swift in Sources */,
-				863197371ECA539C00A77721 /* CellModel.swift in Sources */,
+				86CFD8BA1EE4E0DE007C863B /* AddFeatureView.swift in Sources */,
 				863EE5371EC8EDB80064601B /* CardView.swift in Sources */,
+				86D974051EF6BB1E0091F11E /* CollectionView.swift in Sources */,
+				86D974031EF6967E0091F11E /* CollectionViewModel.swift in Sources */,
 				863EE5061EC8ECB10064601B /* AppDelegate.swift in Sources */,
 				86A560C41ED90F5900DDA44F /* DetailViewController.swift in Sources */,
-				8636EA961ED9461900EFC5CC /* AddFeatureViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

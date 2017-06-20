@@ -12,19 +12,19 @@ private let reuseIdentifier = "Cell"
 
 class CollectionViewController: UICollectionViewController, UIGestureRecognizerDelegate {
     
-    var addView: CardView!
+    let model = CollectionViewModel()
+    var addView: AddFeatureView!
     var tagNum: Int = 1
-    var imageList = ["coffee","selfie","selfie2","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee","coffee"]
     var n = 0
     var rows:Int = 0
-
-    let swi = UISwitch(frame: CGRect(x: 10, y: 10, width: 30, height: 10))
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setRightBarButton(UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(self.added)), animated: true)
-        
-        swi.addTarget(self, action:  #selector(switchChange), for: UIControlEvents.valueChanged)
+        model.swi = UISwitch(frame: CGRect(x: 10, y: 20, width: 30, height: 10))
+        model.swi.addTarget(self, action:  #selector(reloadData), for: UIControlEvents.valueChanged)
+        model.switch_2 = UISwitch(frame: CGRect(x: 10, y: 60, width: 30, height: 10))
+        model.switch_2.addTarget(self, action:  #selector(reloadData_2), for: UIControlEvents.valueChanged)
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,7 +45,7 @@ class CollectionViewController: UICollectionViewController, UIGestureRecognizerD
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CardCollectionViewCell
-        cell.headImage.image = UIImage(named: imageList[indexPath.row])
+        cell.headImage.image = UIImage(named: model.imageList[indexPath.row])
         cell.setNeedsDisplay()
         return cell
     }
@@ -53,11 +53,12 @@ class CollectionViewController: UICollectionViewController, UIGestureRecognizerD
     @objc func added() {
         
         if ((n % 2) == 0){
-        self.addView = CardView(frame: CGRect(x: 230, y: 670, width: 140, height: 200))
+        self.addView = AddFeatureView(frame: CGRect(x: 230, y: 670, width: 140, height: 200))
         self.addView.tag = tagNum
         self.addView.setNeedsDisplay()
         self.addView.backgroundColor = UIColor(red: 26, green: 188, blue: 156, alpha: 1)
-        self.addView.addSubview(swi)
+        self.addView.addSubview(model.swi)
+        self.addView.addSubview(model.switch_2)
         self.view.addSubview(addView)
         self.addView.alpha = 0
             UIView.animate(withDuration: 0.35, animations: {
@@ -95,24 +96,35 @@ class CollectionViewController: UICollectionViewController, UIGestureRecognizerD
 
     }
     
-    override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        
+    func switchChange() {
+        if model.swi.isOn || model.switch_2.isOn {
+        rows += 1
+            print(model.imageList)
+        collectionView?.reloadData()
+        }else if model.swi.isOn != true || model.switch_2.isOn != true{
+            print(model.imageList)
+            rows -= 1
+            collectionView?.reloadData()
+        }
     }
     
-    func switchChange() {
-        if swi.isOn {
-        print("added")
-        rows += 1
-        collectionView?.reloadData()
+    func reloadData(n: Int){
+        if model.swi.isOn{
+        model.imageList.append("selfie2")
+        switchChange()
+        }else{
+            model.imageList.remove(at: model.imageList.index(of: "selfie2")!)
+            switchChange()
+        }
+    }
+    func reloadData_2(){
+        if model.switch_2.isOn{
+            model.imageList.append("coffee")
+            switchChange()
+        }else{
+            model.imageList.remove(at: model.imageList.index(of: "coffee")!)
+            switchChange()
         }
     }
 
-}
-
-extension CollectionViewController: UICollectionViewDelegateFlowLayout{
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets{
-        let inset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-        return inset
-    }
 }
