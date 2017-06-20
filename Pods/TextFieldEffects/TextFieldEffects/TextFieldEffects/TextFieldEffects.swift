@@ -65,7 +65,7 @@ open class TextFieldEffects : UITextField {
     /**
     Draws the receiver’s image within the passed-in rectangle.
     
-    - parameter rect:	The portion of the view’s bounds that needs to be updated.
+    - parameter rect:    The portion of the view’s bounds that needs to be updated.
     */
     open func drawViewsForRect(_ rect: CGRect) {
         fatalError("\(#function) must be overridden")
@@ -110,14 +110,14 @@ open class TextFieldEffects : UITextField {
     /**
     The textfield has started an editing session.
     */
-    open func textFieldDidBeginEditing() {
+    @objc open func textFieldDidBeginEditing() {
         animateViewsForTextEntry()
     }
     
     /**
     The textfield has ended an editing session.
     */
-    open func textFieldDidEndEditing() {
+    @objc open func textFieldDidEndEditing() {
         animateViewsForTextDisplay()
     }
     

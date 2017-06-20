@@ -108,7 +108,7 @@ class CollectionViewController: UICollectionViewController, UIGestureRecognizerD
         }
     }
     
-    func reloadData(n: Int){
+    @objc func reloadData(n: Int){
         if model.swi.isOn{
         model.imageList.append("selfie2")
         switchChange()
@@ -117,7 +117,7 @@ class CollectionViewController: UICollectionViewController, UIGestureRecognizerD
             switchChange()
         }
     }
-    func reloadData_2(){
+    @objc func reloadData_2(){
         if model.switch_2.isOn{
             model.imageList.append("coffee")
             switchChange()

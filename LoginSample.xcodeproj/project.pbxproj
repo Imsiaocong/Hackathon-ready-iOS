@@ -21,6 +21,9 @@
 		863EE5261EC8ECB10064601B /* LoginSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863EE5251EC8ECB10064601B /* LoginSampleUITests.swift */; };
 		863EE5371EC8EDB80064601B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863EE5361EC8EDB80064601B /* CardView.swift */; };
 		863EE53B1EC8F8E80064601B /* authModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863EE53A1EC8F8E80064601B /* authModel.swift */; };
+		864118D31EF96F03001FF427 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 864118D21EF96F03001FF427 /* Resnet50.mlmodel */; };
+		864118D51EF96F35001FF427 /* ImageDetectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864118D41EF96F35001FF427 /* ImageDetectionModel.swift */; };
+		864118D71EF973FB001FF427 /* ImageDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864118D61EF973FB001FF427 /* ImageDetectionViewController.swift */; };
 		86A560C41ED90F5900DDA44F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A560C31ED90F5900DDA44F /* DetailViewController.swift */; };
 		86CFD8B81EE4E042007C863B /* AddFeatureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86CFD8B71EE4E042007C863B /* AddFeatureView.xib */; };
 		86CFD8BA1EE4E0DE007C863B /* AddFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CFD8B91EE4E0DE007C863B /* AddFeatureView.swift */; };
@@ -67,6 +70,9 @@
 		863EE5271EC8ECB10064601B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		863EE5361EC8EDB80064601B /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		863EE53A1EC8F8E80064601B /* authModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = authModel.swift; sourceTree = "<group>"; };
+		864118D21EF96F03001FF427 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Resnet50.mlmodel; path = ../../../Resnet50.mlmodel; sourceTree = "<group>"; };
+		864118D41EF96F35001FF427 /* ImageDetectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetectionModel.swift; sourceTree = "<group>"; };
+		864118D61EF973FB001FF427 /* ImageDetectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetectionViewController.swift; sourceTree = "<group>"; };
 		86A560C31ED90F5900DDA44F /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		86CFD8B71EE4E042007C863B /* AddFeatureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddFeatureView.xib; sourceTree = "<group>"; };
 		86CFD8B91EE4E0DE007C863B /* AddFeatureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFeatureView.swift; sourceTree = "<group>"; };
@@ -146,8 +152,8 @@
 			isa = PBXGroup;
 			children = (
 				863EE5391EC8F8CC0064601B /* Model */,
-				863EE5381EC8F0710064601B /* Controller */,
 				863EE5351EC8EDA20064601B /* View */,
+				863EE5381EC8F0710064601B /* Controller */,
 				863EE5051EC8ECB10064601B /* AppDelegate.swift */,
 				863EE5091EC8ECB10064601B /* Main.storyboard */,
 				863EE50C1EC8ECB10064601B /* Assets.xcassets */,
@@ -194,6 +200,7 @@
 				863EE5071EC8ECB10064601B /* ViewController.swift */,
 				863653E91EC944D800FD471B /* CollectionViewController.swift */,
 				86A560C31ED90F5900DDA44F /* DetailViewController.swift */,
+				864118D61EF973FB001FF427 /* ImageDetectionViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -201,8 +208,10 @@
 		863EE5391EC8F8CC0064601B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				864118D21EF96F03001FF427 /* Resnet50.mlmodel */,
 				863EE53A1EC8F8E80064601B /* authModel.swift */,
 				86D974021EF6967E0091F11E /* CollectionViewModel.swift */,
+				864118D41EF96F35001FF427 /* ImageDetectionModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -295,15 +304,18 @@
 					863EE5011EC8ECB10064601B = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = PGC62Z29HJ;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					863EE5151EC8ECB10064601B = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 863EE5011EC8ECB10064601B;
 					};
 					863EE5201EC8ECB10064601B = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 863EE5011EC8ECB10064601B;
 					};
@@ -501,11 +513,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				863653EC1EC9612000FD471B /* CardViewCell.swift in Sources */,
+				864118D31EF96F03001FF427 /* Resnet50.mlmodel in Sources */,
 				863653EA1EC944D800FD471B /* CollectionViewController.swift in Sources */,
+				864118D71EF973FB001FF427 /* ImageDetectionViewController.swift in Sources */,
 				863EE5081EC8ECB10064601B /* ViewController.swift in Sources */,
 				863EE53B1EC8F8E80064601B /* authModel.swift in Sources */,
 				86CFD8BA1EE4E0DE007C863B /* AddFeatureView.swift in Sources */,
 				863EE5371EC8EDB80064601B /* CardView.swift in Sources */,
+				864118D51EF96F35001FF427 /* ImageDetectionModel.swift in Sources */,
 				86D974051EF6BB1E0091F11E /* CollectionView.swift in Sources */,
 				86D974031EF6967E0091F11E /* CollectionViewModel.swift in Sources */,
 				863EE5061EC8ECB10064601B /* AppDelegate.swift in Sources */,
@@ -667,7 +682,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dahu.LoginSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -681,7 +697,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dahu.LoginSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -695,7 +712,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dahu.LoginSampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LoginSample.app/LoginSample";
 			};
 			name = Debug;
@@ -710,7 +728,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dahu.LoginSampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LoginSample.app/LoginSample";
 			};
 			name = Release;
@@ -724,7 +743,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dahu.LoginSampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = LoginSample;
 			};
 			name = Debug;
@@ -738,7 +758,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dahu.LoginSampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = LoginSample;
 			};
 			name = Release;
