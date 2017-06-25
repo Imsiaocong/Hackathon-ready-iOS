@@ -46,6 +46,8 @@ class CollectionViewController: UICollectionViewController, UIGestureRecognizerD
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CardCollectionViewCell
         cell.headImage.image = UIImage(named: model.imageList[indexPath.row])
+        cell.headImage.layer.masksToBounds = true
+        cell.headImage.layer.cornerRadius = 65
         cell.setNeedsDisplay()
         return cell
     }
@@ -82,18 +84,21 @@ class CollectionViewController: UICollectionViewController, UIGestureRecognizerD
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
-        print(indexPath.row)
+        var id = ""
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        let controller = sb.instantiateViewController(withIdentifier: "DetailViewController")
-        self.present(controller, animated: true, completion: nil)
-        
+        if model.imageList[indexPath.row] == "selfie2" {
+            id = "DetailViewController"
+        }else if model.imageList[indexPath.row] == "coffee" {
+            id = "DetectionViewController"
+        }
                 if let viewWithTag = self.view.viewWithTag(tagNum) {
                     viewWithTag.removeFromSuperview()
                     n = 0
                 }else{
                     
                 }
-
+        let controller = sb.instantiateViewController(withIdentifier: id)
+        self.present(controller, animated: true, completion: nil)
     }
     
     func switchChange() {

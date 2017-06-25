@@ -204,12 +204,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EI1-OM-NDS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2892" y="44"/>
+            <point key="canvasLocation" x="2892" y="-284"/>
         </scene>
         <!--Image Detection View Controller-->
         <scene sceneID="fkQ-8Y-8c5">
             <objects>
-                <viewController id="Ekb-rP-E3d" customClass="ImageDetectionViewController" customModule="LoginSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetectionViewController" id="Ekb-rP-E3d" customClass="ImageDetectionViewController" customModule="LoginSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Kjw-Ei-712"/>
                         <viewControllerLayoutGuide type="bottom" id="oCW-p8-RcB"/>
@@ -218,10 +218,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selfie2" translatesAutoresizingMaskIntoConstraints="NO" id="FW4-Ga-G6a">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="542"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Prediction:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rwq-5J-5Hb">
                                 <rect key="frame" x="16" y="550" width="343" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -234,17 +230,25 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Predict"/>
+                                <connections>
+                                    <action selector="start:" destination="Ekb-rP-E3d" eventType="touchUpInside" id="pQs-1R-yZO"/>
+                                </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selfie2" translatesAutoresizingMaskIntoConstraints="NO" id="FW4-Ga-G6a">
+                                <rect key="frame" x="53" y="79" width="268" height="371"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="image" destination="FW4-Ga-G6a" id="zt7-MI-7Yl"/>
+                        <outlet property="predictionLabel" destination="Rwq-5J-5Hb" id="JuR-Um-6qe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OfA-F7-Jy5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2892" y="853.22338830584715"/>
+            <point key="canvasLocation" x="2892" y="491.60419790104953"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5Ay-3T-fLL">

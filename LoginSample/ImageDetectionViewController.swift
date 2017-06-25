@@ -13,12 +13,16 @@ class ImageDetectionViewController: UIViewController {
     
     @IBOutlet weak var image: UIImageView!
     let detectionModel = ImageDetectionModel()
+    @IBOutlet weak var predictionLabel: UILabel!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        detectionModel.detectImage(image: image.image!)
+        //detectionModel.detectImage(image: image.image!)
+        image.layer.masksToBounds = true
+        image.layer.cornerRadius = 10
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,7 +30,11 @@ class ImageDetectionViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func start(_ sender: UIButton) {
+        detectionModel.detectImage(image: image.image!)
+        predictionLabel.text = detectionModel.answerText
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -13,20 +13,31 @@ import Vision
 @available(iOS 11.0, *)
 class ImageDetectionModel {
     
+    var answerText = ""
+    
     private func toCIImage(from: UIImage)->CIImage? {
         let image:CIImage! = CIImage(image: from)
         return image
     }
     
     func detectImage(image: UIImage) {
+        
+        print("Processing...")
+        
         let ciImage = toCIImage(from: image)
         
         guard let model = try? VNCoreMLModel(for: Resnet50().model) else {
             fatalError("You fucked Up!")
         }
         
-        let request = VNCoreMLRequest(model: model) { (request, error) in
+        let request = VNCoreMLRequest(model: model) { [weak self] request, error in
             //Additional functionalities...
+            guard let res = request.results as? [VNClassificationObservation],
+                let topResult = res.first else {
+                    fatalError()
+            }
+            
+            self?.answerText = "\(topResult.identifier)"
         }
         
         let handler = VNImageRequestHandler(ciImage: ciImage!)
