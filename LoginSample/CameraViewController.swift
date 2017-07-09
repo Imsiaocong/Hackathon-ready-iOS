@@ -1,28 +1,20 @@
 //
-//  ImageDetectionViewController.swift
+//  CameraViewController.swift
 //  LoginSample
 //
-//  Created by Di Wang on 2017/6/20.
+//  Created by Di Wang on 2017/7/10.
 //  Copyright © 2017年 Di Wang. All rights reserved.
 //
 
 import UIKit
+//import SwiftyCam
 
-@available(iOS 11.0, *)
-class ImageDetectionViewController: UIViewController {
-    
-    @IBOutlet weak var image: UIImageView!
-    let detectionModel = ImageDetectionModel()
-    @IBOutlet weak var predictionLabel: UILabel!
-    @IBOutlet weak var predictButton: UIButton!
-    
+class CameraViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        //detectionModel.detectImage(image: image.image!)
-        image.layer.masksToBounds = true
-        image.layer.cornerRadius = 10
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,11 +22,7 @@ class ImageDetectionViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func start(_ sender: UIButton) {
-        detectionModel.detectImage(image: image.image!)
-        predictionLabel.text = detectionModel.answerText
-    }
-    
+
     /*
     // MARK: - Navigation
 

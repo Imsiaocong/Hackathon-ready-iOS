@@ -9,6 +9,7 @@
 import UIKit
 import CoreML
 import Vision
+import Foundation
 
 @available(iOS 11.0, *)
 class ImageDetectionModel {
